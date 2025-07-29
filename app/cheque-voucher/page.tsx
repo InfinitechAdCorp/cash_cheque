@@ -664,32 +664,32 @@ export default function ChequeVoucher() {
           </div>
 
           {/* Header Info - INCREASED FONT SIZES */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mb-4">
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mb-4">
             <div className="flex items-center mt-8">
-              <span className="font-semibold text-sm">Paid to:</span>
+              <span className="font-semibold text-xl">Paid to:</span>
               <span className="ml-2 border-b border-black flex-grow min-h-[1.5rem] flex items-end max-w-[400px]">
-                <span className="pb-1 text-base">{formData.paidTo}</span>
+                <span className="pb-1 text-xl">{formData.paidTo}</span>
               </span>
             </div>
             <div className="flex flex-col items-end space-y-1 mt-4 sm:mt-0">
               <div className="flex items-center w-full justify-end">
                 <div className="flex items-center">
-                  <span className="font-semibold text-sm mr-2">Voucher No</span>
-                  <span className="font-semibold ml-1 text-base">:</span>
+                  <span className="font-semibold text-xl">Voucher No</span>
+                  <span className="font-semibold ml-1 text-xl">:</span>
                 </div>
                 <span className="border-b border-black inline-flex items-end min-w-[185px] text-right min-h-[1.5rem] ml-2">
-                  <span className="pb-1 text-base mt-2">{formData.voucherNo}</span>
+                  <span className="pb-1 text-xl">{formData.voucherNo}</span>
                 </span>
               </div>
               <div className="flex items-center w-full justify-end">
-                <div className="flex items-center ">
-                  <span className="font-semibold text-sm" style={{ width: "108px", textAlign: "left" }}>
+                <div className="flex items-center">
+                  <span className="font-semibold text-xl" style={{ width: "108px", textAlign: "left" }}>
                     Date
                   </span>
-                  <span className="font-semibold ml-1 text-base">:</span>
+                  <span className="font-semibold ml-1 text-xl">:</span>
                 </div>
                 <span className="border-b border-black inline-flex items-end min-w-[185px] text-right min-h-[1.5rem] ml-2">
-                  <span className="pb-1 text-base">{formatDateForPreview(formData.date)}</span>
+                  <span className="pb-1 text-xl">{formatDateForPreview(formData.date)}</span>
                 </span>
               </div>
             </div>
@@ -699,7 +699,7 @@ export default function ChequeVoucher() {
           <div
             className="border-2 border-black mb-6"
             style={{
-              height: "500px",
+              height: "520px",
               display: "grid",
               gridTemplateRows: "auto 1fr",
             }}
@@ -724,14 +724,14 @@ export default function ChequeVoucher() {
                   }}
                 >
                   <div className="flex items-start mb-2">
-                    <span className="font-bold text-sm" style={{ width: "100px", flexShrink: 0 }}>
+                    <span className="font-bold text-base mt-1" style={{ width: "100px", flexShrink: 0 }}>
                       PURPOSE
                     </span>
-                    <span className="font-semibold mr-2 text-sm" style={{ flexShrink: 0 }}>
+                    <span className="font-semibold mr-2 text-xl" style={{ flexShrink: 0 }}>
                       :
                     </span>
                     <div
-                      className="text-base"
+                      className="pb-1 text-xl"
                       style={{
                         flex: 1,
                         whiteSpace: "pre-wrap",
@@ -754,14 +754,14 @@ export default function ChequeVoucher() {
                   }}
                 >
                   <div className="flex items-start mb-2">
-                    <span className="font-bold text-base" style={{ width: "100px", flexShrink: 0 }}>
+                    <span className="font-bold text-base mt-1" style={{ width: "100px", flexShrink: 0 }}>
                       NOTE
                     </span>
-                    <span className="font-semibold mr-2 text-sm" style={{ flexShrink: 0 }}>
+                      <span className="font-semibold mr-2 text-xl" style={{ flexShrink: 0 }}>
                       :
                     </span>
                     <div
-                      className="text-base"
+                      className="pb-1 text-xl"
                       style={{
                         flex: 1,
                         whiteSpace: "pre-wrap",
@@ -778,42 +778,42 @@ export default function ChequeVoucher() {
                 {/* Other fields - Fixed spacing with aligned colons */}
                 <div className="space-y-2">
                   <div className="flex items-center">
-                    <span className="font-semibold text-sm" style={{ width: "200px", flexShrink: 0 }}>
+                    <span className="font-bold text-base" style={{ width: "200px", flexShrink: 0 }}>
                       CHECK DATE
                     </span>
-                    <span className="font-semibold mr-2 text-sm" style={{ flexShrink: 0 }}>
+                      <span className="font-semibold mr-2 text-xl" style={{ flexShrink: 0 }}>
                       :
                     </span>
                     <span
-                      className="border-b border-black pb-1 text-base"
+                      className="border-b border-black pb-1 text-xl"
                       style={{ overflow: "hidden", width: "400px" }}
                     >
                       {formatDate(formData.checkDate)}
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <span className="font-semibold text-sm" style={{ width: "200px", flexShrink: 0 }}>
+                    <span className="font-semibold text-base" style={{ width: "200px", flexShrink: 0 }}>
                       CHECK NO.
                     </span>
-                    <span className="font-semibold mr-2 text-sm" style={{ flexShrink: 0 }}>
+                       <span className="font-semibold mr-2 text-xl" style={{ flexShrink: 0 }}>
                       :
                     </span>
                     <span
-                      className="border-b border-black pb-1 text-base"
+                      className="border-b border-black pb-1 text-xl"
                       style={{ overflow: "hidden", width: "400px" }}
                     >
                       {formData.checkNo}
                     </span>
                   </div>
                   <div className="flex items-center whitespace-nowrap">
-                    <span className="font-semibold text-sm" style={{ width: "200px", flexShrink: 0 }}>
+                    <span className="font-semibold text-base" style={{ width: "200px", flexShrink: 0 }}>
                       ACCOUNT NAME
                     </span>
-                    <span className="font-semibold mr-2 text-sm" style={{ flexShrink: 0 }}>
+                        <span className="font-semibold mr-2 text-xl" style={{ flexShrink: 0 }}>
                       :
                     </span>
                     <span
-                      className="border-b border-black pb-1 text-base"
+                      className="border-b border-black pb-1 text-xl"
                       style={{
                         overflow: "hidden",
                         width: "400px",
@@ -825,14 +825,14 @@ export default function ChequeVoucher() {
                     </span>
                   </div>
                   <div className="flex items-center whitespace-nowrap">
-                    <span className="font-semibold text-sm" style={{ width: "200px", flexShrink: 0 }}>
+                    <span className="font-semibold text-base" style={{ width: "200px", flexShrink: 0 }}>
                       ACCOUNT NUMBER
                     </span>
-                    <span className="font-semibold mr-2 text-sm" style={{ flexShrink: 0 }}>
+                       <span className="font-semibold mr-2 text-xl" style={{ flexShrink: 0 }}>
                       :
                     </span>
                     <span
-                      className="border-b border-black pb-1 text-base"
+                      className="border-b border-black pb-1 text-xl"
                       style={{
                         overflow: "hidden",
                         width: "400px",
@@ -844,14 +844,14 @@ export default function ChequeVoucher() {
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <span className="font-bold text-sm" style={{ width: "200px", flexShrink: 0 }}>
+                    <span className="font-bold text-base" style={{ width: "200px", flexShrink: 0 }}>
                       AMOUNT
                     </span>
-                    <span className="font-semibold mr-2 text-sm" style={{ flexShrink: 0 }}>
+                        <span className="font-semibold mr-2 text-xl" style={{ flexShrink: 0 }}>
                       :
                     </span>
                     <span
-                      className="border-b border-black pb-1 text-base"
+                      className="border-b border-black pb-1 text-xl"
                       style={{ overflow: "hidden", width: "400px" }}
                     >
                       {formData.amount
@@ -883,13 +883,13 @@ export default function ChequeVoucher() {
           <div className="border-2 border-black mb-6 p-4">
             {/* PROJECT DETAILS */}
             <div className="flex items-start mb-2">
-              <span className="font-bold text-sm whitespace-nowrap" style={{ width: "200px", flexShrink: 0 }}>
+              <span className="font-bold text-base whitespace-nowrap" style={{ width: "200px", flexShrink: 0 }}>
                 PROJECT DETAILS
               </span>
-              <span className="font-bold mr-2 text-sm" style={{ flexShrink: 0 }}>
+              <span className="font-bold mr-2 text-xl" style={{ flexShrink: 0 }}>
                 :
               </span>
-              <div className="border-b border-black text-base" style={{ width: "400px" }}>
+              <div className="border-b border-black text-xl" style={{ width: "400px" }}>
                 {formData.projectDetails}
               </div>
             </div>
@@ -899,8 +899,8 @@ export default function ChequeVoucher() {
               <span className="font-bold text-sm" style={{ width: "200px", flexShrink: 0 }}>
                 OWNER/CLIENT
               </span>
-              <span className="font-semibold mr-2 text-sm">:</span>
-              <div className="border-b border-black text-base" style={{ width: "400px" }}>
+              <span className="font-semibold mr-2 text-xl">:</span>
+              <div className="border-b border-black text-xl" style={{ width: "400px" }}>
                 {formData.ownerClient}
               </div>
             </div>
@@ -921,13 +921,13 @@ export default function ChequeVoucher() {
                         crossOrigin="anonymous"
                       />
                     )}
-                    <span className="pb-1 text-base">{receivedBy.name}</span>
+                    <span className="pb-1 text-xl">{receivedBy.name}</span>
                   </div>
                   <div className="text-base text-center font-medium">PRINTED NAME AND SIGNATURE</div>
                 </div>
                 <div style={{ width: "180px" }}>
                   <div className="border-b-2 border-black min-h-[60px] flex items-end justify-center mb-2">
-                    <span className="pb-1 text-base">{formatDate(receivedBy.date)}</span>
+                    <span className="pb-1 text-xl">{formatDate(receivedBy.date)}</span>
                   </div>
                   <div className="text-base text-center font-medium">DATE</div>
                 </div>
@@ -947,13 +947,13 @@ export default function ChequeVoucher() {
                           crossOrigin="anonymous"
                         />
                       )}
-                      <span className="pb-1 text-base">{approvedBy.name}</span>
+                      <span className="pb-1 text-xl">{approvedBy.name}</span>
                     </div>
                     <div className="text-base text-center font-medium">PRINTED NAME AND SIGNATURE</div>
                   </div>
                   <div style={{ width: "180px" }}>
                     <div className="border-b-2 border-black min-h-[60px] flex items-end justify-center mb-2">
-                      <span className="pb-1 text-base">{formatDate(approvedBy.date)}</span>
+                      <span className="pb-1 text-xl">{formatDate(approvedBy.date)}</span>
                     </div>
                     <div className="text-base text-center font-medium">DATE</div>
                   </div>
