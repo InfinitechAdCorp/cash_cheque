@@ -594,7 +594,11 @@ export default function CashVoucher() {
         <div
           ref={previewRef}
           className="bg-white p-6 border-2 border-gray-300 text-black w-full text-lg"
-          style={{ fontFamily: "Arial, sans-serif", fontSize: "26px" }}
+          style={{
+            fontFamily: "Arial, sans-serif",
+            minWidth: "800px",
+            fontSize: "14px", // Increased base font size
+          }}
         >
           <div className="flex items-start justify-between mb-6">
             <div className="flex-shrink-0">
@@ -613,30 +617,30 @@ export default function CashVoucher() {
           {/* Header Info - INCREASED FONT SIZES */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mb-4">
             <div className="flex items-center mt-8">
-              <span className="font-semibold text-1xl">Paid to:</span>
+              <span className="font-semibold text-xl">Paid to:</span>
               <span className="ml-2 border-b border-black flex-grow min-h-[1.5rem] flex items-end max-w-[400px]">
-                <span className="pb-1 text-1xl">{formData.paidTo}</span>
+                <span className="pb-1 text-xl">{formData.paidTo}</span>
               </span>
             </div>
             <div className="flex flex-col items-end space-y-1 mt-4 sm:mt-0">
               <div className="flex items-center w-full justify-end">
                 <div className="flex items-center">
-                  <span className="font-semibold text-1xl">Voucher No</span>
+                  <span className="font-semibold text-xl">Voucher No</span>
                   <span className="font-semibold ml-1 text-xl">:</span>
                 </div>
                 <span className="border-b border-black inline-flex items-end min-w-[185px] text-right min-h-[1.5rem] ml-2">
-                  <span className="pb-1 text-1xl mt-2">{formData.voucherNo}</span>
+                  <span className="pb-1 text-xl mt-2">{formData.voucherNo}</span>
                 </span>
               </div>
               <div className="flex items-center w-full justify-end">
                 <div className="flex items-center">
-                  <span className="font-semibold text-1xl mr-10" style={{ width: "108px", textAlign: "left" }}>
+                  <span className="font-semibold text-xl " style={{ width: "108px", textAlign: "left" }}>
                     Date
                   </span>
                   <span className="font-semibold ml-1 text-xl">:</span>
                 </div>
                 <span className="border-b border-black inline-flex items-end min-w-[185px] text-right min-h-[1.5rem] ml-2">
-                  <span className="pb-1 text-1xl">{formatDateForPreview(formData.date)}</span>
+                  <span className="pb-1 text-xl">{formatDateForPreview(formData.date)}</span>
                 </span>
               </div>
             </div>
@@ -646,17 +650,17 @@ export default function CashVoucher() {
           <div
             className="border-2 border-black mb-6"
             style={{
-              height: "500px",
+              height: "520px",
               display: "grid",
               gridTemplateRows: "auto 1fr",
             }}
           >
             {/* Header Row */}
             <div className="grid grid-cols-[8fr_4fr] border-b border-black bg-gray-100 h-[50px]">
-              <div className="py-2 px-2 font-semibold text-center border-r border-black flex items-center justify-center text-1xl">
+              <div className="py-2 px-2 font-semibold text-center border-r border-black flex items-center justify-center text-xl">
                 PARTICULARS
               </div>
-              <div className="py-2 px-2 font-semibold text-center flex items-center justify-center text-1xl">
+              <div className="py-2 px-2 font-semibold text-center flex items-center justify-center text-xl">
                 AMOUNT
               </div>
             </div>
@@ -674,10 +678,10 @@ export default function CashVoucher() {
                   }}
                 >
                   <div className="flex items-start">
-                    <span className="font-bold text-1xl mr-2">PURPOSE</span>
-                    <span className="font-bold mr-2 text-1xl">:</span>
+                    <span className="font-bold text-xl mr-2">PURPOSE</span>
+                    <span className="font-bold mr-2 text-xl">:</span>
                     <div
-                      className="flex-1 whitespace-pre-wrap word-break-break-word text-1xl"
+                      className="flex-1 whitespace-pre-wrap word-break-break-word text-xl"
                       style={{
                         overflow: "hidden",
                         maxHeight: "180px",
@@ -697,10 +701,10 @@ export default function CashVoucher() {
                   }}
                 >
                   <div className="flex items-start">
-                    <span className="font-bold text-1xl mr-2">NOTE</span>
-                    <span className="font-bold mr-2 text-1xl">:</span>
+                    <span className="font-bold text-xl mr-2">NOTE</span>
+                    <span className="font-bold mr-2 text-xl">:</span>
                     <div
-                      className="flex-1 whitespace-pre-wrap word-break-break-word text-1xl"
+                      className="flex-1 whitespace-pre-wrap word-break-break-word text-xl"
                       style={{
                         overflow: "hidden",
                         maxHeight: "130px",
@@ -720,7 +724,7 @@ export default function CashVoucher() {
                 {/* Spacer to align total at bottom */}
                 <div style={{ flex: 1 }}></div>
                 {/* Total at bottom */}
-                <div className="flex items-center justify-between font-semibold pt-2 text-1xl">
+                <div className="flex items-center justify-between font-semibold pt-2 text-xl">
                   <span>TOTAL</span>
                   <span>₱ {Number(calculateTotal().split(".")[0]).toLocaleString()}</span>
                 </div>
@@ -736,7 +740,7 @@ export default function CashVoucher() {
                 PROJECT DETAILS
               </span>
               <span className="font-bold text-xl mr-2">:</span>
-              <div className="border-b border-black text-1xl truncate" style={{ width: "400px", whiteSpace: "nowrap" }}>
+              <div className="border-b border-black text-xl truncate" style={{ width: "400px", whiteSpace: "nowrap" }}>
                 {formData.projectDetails}
               </div>
             </div>
@@ -747,7 +751,7 @@ export default function CashVoucher() {
                 OWNER/CLIENT
               </span>
               <span className="font-semibold mr-2 text-xl">:</span>
-              <div className="border-b border-black text-1xl" style={{ width: "400px" }}>
+              <div className="border-b border-black text-xl" style={{ width: "400px" }}>
                 {formData.ownerClient}
               </div>
             </div>
@@ -768,13 +772,13 @@ export default function CashVoucher() {
                         crossOrigin="anonymous"
                       />
                     )}
-                    <span className="pb-1 text-1xl">{receivedBy.name}</span>
+                    <span className="pb-1 text-xl">{receivedBy.name}</span>
                   </div>
                   <div className="text-base text-center font-medium">PRINTED NAME AND SIGNATURE</div>
                 </div>
                 <div style={{ width: "180px" }}>
                   <div className="border-b-2 border-black min-h-[60px] flex items-end justify-center mb-2">
-                    <span className="pb-1 text-1xl">{formatDate(receivedBy.date)}</span>
+                    <span className="pb-1 text-xl">{formatDate(receivedBy.date)}</span>
                   </div>
                   <div className="text-base text-center font-medium">DATE</div>
                 </div>
@@ -794,13 +798,13 @@ export default function CashVoucher() {
                           crossOrigin="anonymous"
                         />
                       )}
-                      <span className="pb-1 text-1xl">{approvedBy.name}</span>
+                      <span className="pb-1 text-xl">{approvedBy.name}</span>
                     </div>
                     <div className="text-base text-center font-medium">PRINTED NAME AND SIGNATURE</div>
                   </div>
                   <div style={{ width: "180px" }}>
                     <div className="border-b-2 border-black min-h-[60px] flex items-end justify-center mb-2">
-                      <span className="pb-1 text-1xl">{formatDate(approvedBy.date)}</span>
+                      <span className="pb-1 text-xl">{formatDate(approvedBy.date)}</span>
                     </div>
                     <div className="text-base text-center font-medium">DATE</div>
                   </div>
